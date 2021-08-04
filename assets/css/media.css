@@ -1,0 +1,199 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #sidebar {
+    display: none;
+  }
+  
+  .show {
+    display: block;
+  }
+
+  main {
+    padding: 0;
+    margin: 0;
+  }
+
+  main > section {
+    width: 100%;
+  }
+
+  main > section > article {
+    margin: 20px;
+  }
+
+  .padding {
+    padding: 20px;
+  }
+
+
+}
+
+
+@media only screen and (max-width: 850px) {
+
+  #start {
+    background-image: url("/img/bg/start850.jpg");
+  }
+
+  #historyBg {
+      background-image: url("/img/bg/history850.jpg");
+  }
+
+  #contact {
+      background-image: url("/img/bg/contact850.jpg");
+  }
+
+#names td {
+  text-align: left;
+}
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+
+
+  table tr {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+
+  table td {
+    border-bottom: 1px solid black;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+
+  table td::before {
+
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  #memberTable td:last-child {
+    border-bottom: 0;
+  }
+
+
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+table td{
+    word-break:break-all
+  }
+
+
+  #sidebar {
+    display: none;
+  }
+  
+  .show {
+    display: block;
+  }
+
+  main {
+    padding: 0;
+  }
+  
+  main > section > article {
+    margin: 30px;
+  }
+
+  .padding{
+    padding: 30px;
+  }
+
+
+}
+
+
+
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #sidebar {
+    display: block;
+  }
+  
+  .show {
+    display: block;
+  }
+
+  main {
+    padding-left: 150px;
+  }
+
+
+}
+
+@media only screen and (min-width: 900px) {
+  .padding {
+    padding: 70px;
+  }
+}
+
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {...} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {...} */
+
+
+  /* table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid black;
+    position: relative;
+    padding-left: 50%
+  }
+
+  td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+
+  td:nth-of-type(1):before { content: "Temperatur;"}
+  td:nth-of-type(2):before { content: "Vind;"}
+  td:nth-of-type(3):before { content: "Himmel;"} */
+
+
+
+
+

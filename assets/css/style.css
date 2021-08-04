@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/*********STATIC********/
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.882);
+}
+
+header a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    width: 150px;
+    height: 100vh;
+    padding: 20px;
+    background-color: rgb(120, 140, 151);
+    z-index: 3;
+}
+
+.show {
+    width: 100%;
+}
+
+.hide {
+    display: none;
+}
+
+#sidebar > a {
+    font-family: 'Prata', serif;
+    font-size: 2rem;
+}
+
+nav {
+    width: 100%;
+    height: 100%;
+  }
+  
+nav > ul {
+    width: 100%;
+    min-height: 30vh;
+    list-style-type: none;
+    font-weight: 500;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+}
+
+.fas fa-bars{
+    display: none;
+}
+
+
+/***********BACKGROUND PICTURES**********/
+#start {
+    background-image: url("/img/bg/start.jpg");
+}
+
+#historyBg {
+    background-image: url("/img/bg/history.jpg");
+}
+
+#contact {
+    background-image: url("/img/bg/contact.jpg");
+}
+
+/*********GENERAL********/
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+main {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+
+main > section {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(233, 235, 243);
+}
+
+main > section > article {
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.815);
+}
+
+main > section > article > section > article{
+    margin-bottom: 20px;
+}
+
+article h2 {
+    text-transform: uppercase;
+    font-family: 'Prata', serif;
+    margin-bottom: 2rem;
+}
+
+
+.flex-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; 
+    width: 100%;
+}
+
+.padding {
+    padding: 70px;
+}
+
+.space {
+    width: 45%;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.right {
+    text-align: center;
+}
+
+/*********START********/
+.float {
+    float: right;
+    margin: 20px;
+}
+
+.margin {
+    margin-right: 50px;;
+}
+
+/*********TURISM********/
+#turism  p, #turism img, #memberInfo p {
+    margin-bottom: 15px;
+    max-width: 450px;
+}
+
+
+/*********MEMBERINFO********/
+#memberInfo p {
+    min-width: 227px;
+    overflow-wrap: break-word;
+}
+
+#memberInfo figure {
+    margin-bottom: 50px;
+}
+
+#weatherToday {
+    margin-bottom: 25px; 
+    margin-right: 30px;
+    
+}
+
+
+
+/*********TABLE********/
+
+tr, td {
+    background-color: white;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th {
+    font-weight: bold;
+}
+
+th, td {
+    padding: 10px;
+}
+
+/*********CONTACT********/
+#msg {
+    max-width: 100%;
+}
+
+.msgSent {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#email {
+    margin-bottom: 5px;
+}
+
+#submit {
+    padding: 5px;
+}
+
+#form {
+
+}
+
+/*********FOOTER********/
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.747);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
