@@ -12,6 +12,24 @@
     <title>Djupvik</title>
 </head>
 <body id="root">
+    <header>    
+        <i id="dropdown" class="fas fa-bars hide"></i>
+        <a id="engLink" href="english.html" tabindex="9">English</a>
+    </header>
+    <aside id="sidebar" class="sidebar">
+        <a href="index.html" tabindex="1">Djupvik</a>
+        <nav>
+            <ul>
+                <a href="#start"><li>Start</li></a>
+                <a href="#guestMooring"><li>Gästhamnen</li></a>
+                <a href="#history"><li id="historia">Historia</li></a>
+                <a href="#turism"><li>Turitsmål</li></a>
+                <a href="#memberInfo" id="memberChangeTab"><li>Medlemsinfo</li></a>
+                <a href="#weather"><li>Väder</li></a>
+                <a href="#contact"><li>Kontakt</li></a>
+            </ul>
+        </nav>
+    </aside>
     <main id="main">
         <section id="start" class="padding">      
             <article class="padding">
@@ -59,13 +77,13 @@
                     </article>
                     <aside >
                         <h3 tabindex="0">Väder</h3>
-                        <section id="weather" class="flex-row"></section>
+                        <section id="weather" class="swe flex-row"></section>
                     </aside>
                 </section> 
             </article>
         </section>
-        <section id="historyBg" class="padding">
-            <article id="history" class="padding">
+        <section id="history" class="padding">
+            <article class="padding">
                 <h2 tabindex="0">Djupviks historia</h2>
                 <section>
                     <h3>En informationsberättelse av en Ekstabo.</h5>
@@ -298,7 +316,7 @@
                                 </p> 
                                 <figure>
                                     <img src="/img/membersInfo/dock.jpg" alt="Människor vid pir" height="150" witdh="225">
-                                    <img src="/img/Extra/HamnensDag.jpg" alt="Bild på Konrad Jakobsson" height="150" width="110">
+                                    <img src="/img/membersInfo/portDay.jpg" alt="Människor vid fiskyhyddor" height="150" width="110">
                                     <figcaption class="italic right">Foto: Björn Hjernquist</figcaption> 
                                 </figure>
                             </section>
@@ -371,7 +389,7 @@
                     <fieldset id="fieldset" class="space margin">
                         <legend>Kontaktuppgifter</legend>   
                         <p><span class="bold">Hamnfogde<br /> Bo Lautin</span><br /><br />
-                            mobil <a href="tel:070792310">0707-920310</a><br />
+                            Mobil <a href="tel:070792310">0707-920310</a><br /><br />
                             Djupviks hamnförening<br />
                             c/o Ekholm<br />
                             Eksta Hägur 170<br />
@@ -412,5 +430,6 @@
             </article>
         </section>
     </main>
+    <footer><p>&copy; Djupvikshamn.se info@djupvikshamn.se</p></footer>
 </body>
 </html>

@@ -5,10 +5,11 @@ const printWeather = document.getElementById("weather");
 //todays date
 let todayDate = new Date();
 //tomorrows date
+
 let tmrwDate = new Date();
 tmrwDate.setDate(todayDate.getDate() + 1);
 
-
+//times for dates
 const today06 = getDate(todayDate, "T06:00:00Z");
 const today12 = getDate(todayDate, "T12:00:00Z");
 const today18 = getDate(todayDate, "T18:00:00Z");
@@ -18,31 +19,37 @@ const tmrw12 = getDate(tmrwDate, "T12:00:00Z");
 const tmrw18 = getDate(tmrwDate, "T18:00:00Z");
 
 
-
-
+//get forcast for times & dates
 function getForecast() {
-    fetch(`https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/16.158/lat/58.5812/data.json`)
-    .then((response) => response.json())
-    .then(function(forecast){
+
+    if(printWeather !== null) {
+
+        fetch(`https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/16.158/lat/58.5812/data.json`)
+        .then((response) => response.json())
+        .then(function(forecast){
+            
+            //push parameters to array for all times
+            const td06 = getParams(forecast, today06);
+            const td12 = getParams(forecast, today12);
+            const td18 = getParams(forecast, today18);
+
+            const tm06 = getParams(forecast, tmrw06);
+            const tm12 = getParams(forecast, tmrw12);
+            const tm18 = getParams(forecast, tmrw18);
+
+            //save forecast data to variables
+            printForecast(td06, td12, td18, tm06, tm12, tm18);
+
+            //rotate arrow
+            rotate(td06[0].wd);
+            rotate(td12[0].wd);
+            rotate(td18[0].wd);
+            rotate(tm06[0].wd);
+            rotate(tm12[0].wd);
+            rotate(tm18[0].wd);
         
-        const td06 = getParams(forecast, today06);
-        const td12 = getParams(forecast, today12);
-        const td18 = getParams(forecast, today18);
-
-        const tm06 = getParams(forecast, tmrw06);
-        const tm12 = getParams(forecast, tmrw12);
-        const tm18 = getParams(forecast, tmrw18);
-
-        printForecast(td06, td12, td18, tm06, tm12, tm18);
-
-        rotate(td06[0].wd);
-        rotate(td12[0].wd);
-        rotate(td18[0].wd);
-        rotate(tm06[0].wd);
-        rotate(tm12[0].wd);
-        rotate(tm18[0].wd);
-       
-    });
+        });
+    };
 
 };
 
@@ -66,10 +73,12 @@ function getParams(forecast, time) {
     const arr = []; 
     const date = forecast.timeSeries.find( ({ validTime }) => validTime === time );
     
+    //time has passed
     if (date === undefined) {
 
         arr.push({"t": "N/A", "ws": "N/A", "wd": "N/A", "Wsymb2": "N/A"});
     
+    //get data and push to array
     } else {
         
         let tResult = date.parameters.find( ({name}) => name === "t");
@@ -86,101 +95,102 @@ function getParams(forecast, time) {
     return arr;
 };
 
+//get
 function switchDesc(num) {
     
     let val; 
 
     switch(num) {
         case 1:
-            val = "Clear sky";
+            val = "Klart";
             break;
         case 2:
-            val = "Nearly clear sky"
+            val = "Övervägande soligt";
             break;
         case 3:
-            val = "Variable cloudiness";
+            val = "Växlande molnighet";
             break;
         case 4:
-            val = "Halfclear sky";
+            val = "Halvklart";
             break;
         case 5:
-            val = "Cloudy sky"
+            val = "Övervägande molnigt";
             break;
         case 6:
-            val = "Overcast";
+            val = "Molnigt";
             break;
         case 7:
-            val = "Fog";
+            val = "Dimma";
             break;
         case 8:
-            val = "Light rain showers"
+            val = "Lätta regnskurar";
             break;
         case 9:
-            val = "Moderate rain showers";
+            val = "Måttliga regnskurar";
             break;
         case 10:
-            val = "Heavy rain showers";
+            val = "Kraftiga regnskurar";
             break;
         case 11:
-            val = "Thunderstorm";
+            val = "Åskväder";
             break;
         case 12:
-            val = "Light sleet showers";
+            val = "Lätta snöblandade regnskurar";
             break;
         case 13:
-            val = "Moderate sleet showers";
+            val = "Snöblandade regnskurar";
             break;
         case 14:
-            val = "Heavy sleet showers";
+            val = "Kraftiga snöblandade regnskurar";
             break;
         case 15:
-            val = "Light snow showers";
+            val = "Lätt snöby";
             break;
         case 16:
-            val = "Moderate snow showers"
+            val = "Snöby";
             break;
         case 17:
-            val = "Heave snow showers";
+            val = "Kraftigt snöby";
             break;
         case 18:
-            val = "Light rain";
+            val = "Lätt regt";
             break;
         case 19:
-            val = "Moderate rain"
+            val = "Regn";
             break;
         case 20:
-            val = "Heavy rain";
+            val = "Kraftigt regn";
             break;
         case 21:
-            val = "Thunder";
+            val = "Åska";
             break;
         case 22:
-            val = "Light sleet"
+            val = "Lätt snöblandat regn";
             break;
         case 23:
-            val = "Moderate sleet";
+            val = "Snöblandat regn";
             break;
         case 24:
-            val = "Heavy sleet";
+            val = "Kraftigt snöblandat regn";
             break;
         case 25:
-            val = "LIght snowfall"
+            val = "Lätt snöfall";
             break;
         case 26:
-            val = "Moderate snowfall";
+            val = "Måttligt snöfall";
             break;
         case 27:
-            val = "Heavy snowfall";
+            val = "Kraftigt snöfall";
             break;
         default:
             val = "N/A";
-    };
+        };
 
     return val;
-}
+};
 
 function printForecast(td06, td12, td18, tm06, tm12, tm18) {
-    
+
     printWeather.insertAdjacentHTML("beforeend", `
    
         <article>
@@ -188,7 +198,7 @@ function printForecast(td06, td12, td18, tm06, tm12, tm18) {
             <table id="weatherToday" class="opacity">
                 <thead>
                     <tr>
-                        <th scope="col">Kl.</th>
+                        <th class="time" scope="col">Kl.</th>
                         <th scope="col">Temperatur °C</th>
                         <th scope="col">Vind m/s</th>
                         <th scope="col">Himmel</th>
@@ -221,7 +231,7 @@ function printForecast(td06, td12, td18, tm06, tm12, tm18) {
             <table id="weatherTmrw" class="opacity">
                 <thead>
                     <tr>
-                        <th scope="col">Kl.</th>
+                        <th class ="time" scope="col">Kl.</th>
                         <th scope="col">Temperatur °C</th>
                         <th scope="col">Vind m/s</th>
                         <th scope="col">Himmel</th>
