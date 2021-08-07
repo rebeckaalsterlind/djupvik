@@ -1,0 +1,87 @@
+#weatherToday, #weatherTmrw {
+    margin-bottom: 25px; 
+    margin-right: 30px;
+    text-align: center;
+}
+
+tr, td {
+    background-color: var(--opacity);
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid var(--darkgrey);;
+    border-collapse: collapse;
+}
+
+th {
+    font-weight: 600;
+}
+
+th, td {
+    padding: 10px;
+}
+
+@media only screen and (min-width: 568px) {
+
+  table td{
+    word-break: break-all;
+  }
+
+}
+
+
+@media only screen and (max-width: 768px) {
+
+
+    
+      #names td {
+        text-align: left;
+      }
+      table {
+        border: 0;
+      }
+    
+      table caption {
+        font-size: 1.3em;
+      }
+    
+      table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+      }
+    
+      table tr {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+      }
+    
+      table td {
+        border-bottom: 1px solid black;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+      }
+    
+      table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    
+     table td:last-child {
+        border-bottom: 0;
+      }
+    }

@@ -5,35 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/normalize.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/media.css">
+    <link rel="stylesheet" href="./assets/css/weather.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Prata&display=swap" rel="stylesheet">    <script type="module" src="assets/js/main.js" async></script>
-    <script src="./assets/js/main.js" type="module" async></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500&family=Prata&display=swap" rel="stylesheet">
     <title>Djupvik</title>
 </head>
 <body id="root">
     <header>    
         <i id="dropdown" class="fas fa-bars hide"></i>
-        <a id="engLink" href="english.html" tabindex="9">English</a>
+        <a class="eng-link" href="english.html">English</a>
     </header>
     <aside id="sidebar" class="sidebar">
-        <a href="index.html" tabindex="1">Djupvik</a>
+        <h1><a class="logo" href="index.html" tabindex="1">Djupvik</a></h1>
         <nav>
             <ul>
-                <a href="#start"><li>Start</li></a>
-                <a href="#guestMooring"><li>Gästhamnen</li></a>
-                <a href="#history"><li id="historia">Historia</li></a>
-                <a href="#turism"><li>Turitsmål</li></a>
-                <a href="#memberInfo" id="memberChangeTab"><li>Medlemsinfo</li></a>
-                <a href="#weather"><li>Väder</li></a>
-                <a href="#contact"><li>Kontakt</li></a>
+                <li><a href="#start">Start</a></li>
+                <li><a href="#guestMooring">Gästhamnen</a></li>
+                <li><a href="#history">Historia</a></li>
+                <li><a href="#turism">Turistmål</a></li>
+               <li> <a href="#memberInfo">Medlemsinfo</a></li>
+                <li><a href="#weather">Väder</a></li>
+               <li> <a href="#contact">Kontakt</a></li>
             </ul>
         </nav>
     </aside>
     <main id="main">
-        <section id="start" class="padding">      
-            <article class="padding">
+        <div id="start" class="padding">      
+            <section class="padding">
                 <h2 tabindex="0">Djupvik</h2>
+                <p>
                     Djupviks hamn ligger på Gotlands västkust nästan rakt öster om Lilla Karlsö. Hamnen är otroligt vackert belägen 
                     i anslutning till ett gammalt Gotländskt fiskeläge bestående av fiskebodar från sent 1800-tal.
                     Husen är grupperade i tre rader, mellan dem ligger gistgarden där man torkar nät och närmast stranden ligger båthusen. 
@@ -47,12 +48,12 @@
                     
                     Det finns även toaletter i hamnen varav en som är tillgänglighetsanpassad för rullstolar och rollatorer. 
                 </p>
-            </article> 
-        </section>
-        <section class="padding">
-            <article id="guestMooring" class="padding">
+            </section> 
+        </div>
+        <div class="padding">
+            <section id="guestMooring" class="padding">
                 <h2 tabindex="0">Gästhamnen</h2>
-                <section class="flex-row">
+                <div class="flex-row">
                     <article>
                         <h3>Gästbåtar är hjärtligt välkomna!</h3>
                         <p>                  
@@ -75,22 +76,23 @@
                             </span>
                         </p>
                     </article>
-                    <aside >
+                    <aside>
                         <h3 tabindex="0">Väder</h3>
-                        <section id="weather" class="swe flex-row"></section>
+                        <div id="weather" class="swe flex-row"></div>
                     </aside>
-                </section> 
-            </article>
-        </section>
-        <section id="history" class="padding">
-            <article class="padding">
+                </div> 
+            </section>
+        </div>
+        <div id="history" class="padding">
+            <section class="padding">
                 <h2 tabindex="0">Djupviks historia</h2>
-                <section>
-                    <h3>En informationsberättelse av en Ekstabo.</h5>
+                <article>
+                    <h3>En informationsberättelse av en Ekstabo.</h3>
                     <p>
                         Djupviks fiskeläge är det dominerande fiskeläget i Eksta nu och har varit det sedan slutet av 1800-talet. 
                         Hur gammalt fiskeläget är vet jag inte. Det finns ett fotografi från ett avbajningstillfälle 1904 på Nordiska museet från Djupvik. 
                         På fotografiet ser man ett flertal bodar med faltak.<br /><br />
+
                         I Djupvik har det alltid varit mycket folk i rörelse, tidigt fanns här försäljning av olika slags förfriskningar. 
                         I början av 30-talet var det Maria och Herman Svensson som sålde kaffe, smörgåsar och läskedrycker av märken som Champis och Miss-Kiddy. 
                         Dom sålde från ett sköle som var ett tillbygge på Ajvide strandbod ut mot havet och som nu är rivet. Min mor arbetade där i mitten av 30-talet 
@@ -111,16 +113,22 @@
                         1934 blev det Fridolf Johansson, Tomsarve. 1935 blev det Ture Olsson, Jakobs. 1942 valdes Edvard Viberg, Prästgården. 
                         För år 1948 valdes Axel Pettersson, Bopparve och för år 1950 valdes Hugo Andersson, Burge.<br /><br />
                         
-                        <figure class="float">
-                            <img  src="/img/Konrad.jpg" alt="Bild på Konrad Jakobsson" title="Konrad Jakobsson, Tomsarve" height="100">
-                            <figcaption class="italic">Konrak Jakobsson,<br />Tomsarve</figcaption>
-                        </figure>
-                        
+                        1955 beslöts det att fiskarna skulle ringa till fyrmästaren om det behövdes fyras så han slapp cykla till Djupvik i onödan. 
+                        Årsmötet med fiskarna vid Djupviks fiskläge 1943 beslöts det att tillsätta en kommitté på 2 man som skulle undersöka om ett eventuellt hamnbygge. 
+                        Kommittén som valdes var Konrad Olofsson, Grymlings och Konrad Jakobsson, Tomsarve.<br /><br />
+
+                    </p>
+                    <figure class="float">
+                        <img  src="/img/Konrad.jpg" alt="Bild på Konrad Jakobsson" title="Konrad Jakobsson, Tomsarve" height="100">
+                        <figcaption class="italic">Konrak Jakobsson,<br />Tomsarve</figcaption>
+                    </figure>
+                    <p> 
                         År 1944 beslöts det att det skulle bildas en hamnförening. 1945 bildades det en styrelse, 
                         med hamnfogden som ordförande som detta år var Konrad Olofsson, Grymlings. 
-                        De andra styrelsemedlemmarna var Richard Andersson, Tomsarve och Gustav Olofsson, Björkåkra. 
+                        De andra styrelsemedlemmarna var Richard Andersson, Tomsarve och Gustav Olofsson, Björkåkra. <br />
                         1948 bildades den första hamnstyrelsen på 3 personer, till ordförande och tillika kassör valdes Konrad Jakobsson, 
-                        Tomsarve samt Henry Lickander, Bjerges och Edvin Andersson, Tomsarve. Samma år, 1948, i december påbörjades hamnbygget. 
+                        Tomsarve samt Henry Lickander, Bjerges och Edvin Andersson, Tomsarve. <br />
+                        Samma år, 1948, i december påbörjades hamnbygget. 
                         Vid årsmötet 1952 beslöts att hamnstyrelsen skulle ta över hamnfogdens sysslor. 
                         1953 beslöts att bilda Djupviks fiskares ekonomiska förening.<br /><br />
 
@@ -142,70 +150,65 @@
                         Djupviks fiskeläges storhetstid var i början på 1890-talet, när flytten från Kronvalls fiskeläge ägde rum, och fram till första världskriget. 
                         I Djupvik fanns hos länsstyrelsen 1960 registrerat 4 stycken yrkesfiskare och 8 stycken binäringsfiskare.<br /><br />
                     </p>
-                </section>
-                <section>
+                </article>
+                <article>
                     <h3 tabindex="0"> En berättelse om Stormnatten 1941</h3>
                     <p>
-                        Denna berättelse är skriven med personernas vardagsnamn, namnförklaring kommer på slutet. 
+                        Denna berättelse är skriven med personernas vardagsnamn, namnförklaring kommer på slutet. <br /><br />
                         Det var fint väder vid middagstid den 26/10 1941 när tre båtlag gav sig av ut på driv med strömmingsgarn. 
                         Vädret var fint ända tills de satt klart, då började det blåsa upp till nordlig storm. 
-                        Man började genast dra upp garnen igen, för att komma i land så fort som möjligt. 
-                        Det var bara ett båtlag som kom till Djupvik, det var båtlaget med Alfred Pettsen, Ajvide Ebe och Bas-Hugo. 
-                        Ett båtlag kom i land i Vavle, det var Konne Grömlings, Tomsare Ricken och Pauels Lasse. 
+                        Man började genast dra upp garnen igen, för att komma i land så fort som möjligt. <br />
+                        Det var bara ett båtlag som kom till Djupvik, det var båtlaget med Alfred Pettsen, Ajvide Ebe och Bas-Hugo. <br />
+                        Ett båtlag kom i land i Vavle, det var Konne Grömlings, Tomsare Ricken och Pauels Lasse. <br />
                         Mellan Djupvik och Vavle är inte så långt så att man kunde snabbt meddela till Djupvik att man kommit i land i Vavle. 
                         Det hade blivit bensintorrt och i all turbulens i stormen och mörkret tog Grymlingen fel dunk, han hällde på vatten så motorn startade inte.
-               
                     </p>
-        
-                    <fieldset>
+                    <fieldset class="fieldset" id="names">      
                         <legend>Namnförklaring</legend>
-                        <table id="names">
-                            <tr>
-                                <td>Alfred Pettsen</td>
-                                <td>Alfred Pettersson</td>
-                            </tr>
-                            <tr>
-                                <td>Ajvide Ebe</td>
-                                <td>Edvin Jakobsson, Ajvide</td>
-                            </tr>
-                            <tr>
-                                <td>Bas-Hugo</td>
-                                <td>Hugo Andersson, Burge</td>
-                            </tr>
-                            <tr>
-                                <td>Konne Grömlings</td>
-                                <td>Konrad Olofsson, Grymlings </td>
-                            </tr>
-                            <tr>
-                                <td>Tomsare Ricken</td>
-                                <td>Richard Andersson, Tomsarve</td>
-                            </tr>
-                            <tr>
-                                <td>Pauels Lasse</td>
-                                <td>Lars Jakobsson, Bjerges</td>
-                            </tr>
-                            <tr>
-                                <td>Gust Olsen</td>
-                                <td>KGustav Olsson, Dinse</td>
-                            </tr>
-                            <tr>
-                                <td>Kälstu-Gusten</td>
-                                <td>Gustav Lickander, Ajvide</td>
-                            </tr>
-                            <tr>
-                                <td>Burg-Jaken</td>
-                                <td>Jakob Uddin, Burge</td>
-                            </tr>
-                        </table>
+                        <ul class="name-exp">
+                            <li>Alfred Pettsen</li>
+                            <li>Alfred Pettersson</li>
+                        </ul>
+                        <ul class="name-exp">
+                            <li>Ajvide Ebe</li>
+                            <li>Edvin Jakobsson, Ajvide</li>
+                        </ul>
+                        <ul class="name-exp">
+                            <li>Bas-Hugo</li>
+                            <li>Hugo Andersson, Burge</li>
+                        </ul>
+                        <ul class="name-exp">
+                            <li>Konne Grömlings</li>
+                            <li>Konrad Olofsson, Grymlings </li>
+                        </ul>
+                        <ul class="name-exp">
+                            <li>Tomsare Ricken</li>
+                            <li>Richard Andersson, Tomsarve</li>
+                        </ul>
+                        <ul class="name-exp">
+                            <li>Pauels Lasse</td>
+                            <li>Lars Jakobsson, Bjerges</li>
+                        </ul>
+                        <ul class="name-exp">
+                            <li>Gust Olsen</li>
+                            <li>KGustav Olsson, Dinse</li>
+                        </ul>
+                        <ul class="name-exp">
+                            <li>Kälstu-Gusten</li>
+                            <li>Gustav Lickander, Ajvide</li>
+                        </ul>
+                        <ul class="name-exp">
+                            <li>Burg-Jaken</li>
+                            <li>Jakob Uddin, Burge</li>
+                        </ul>
                     </fieldset>
-    
-                </section>
-            </article>
-        </section>
-        <section class="padding">
-            <article id="turism" class="padding">
+                </article>
+            </section>
+        </div>
+        <div class="padding">
+            <section id="turism" class="padding">
                 <h2 tabindex="0">Turistmål i närheten</h2>
-                <section class="flex-row">
+                <div class="flex-row">
                     <article>
                         <h3 tabindex="0">Ekstakusten</h3>
                         <p>Djupviks hamn ligger i den norra delen av Ekstakustens långa kuststräcka. 
@@ -217,9 +220,12 @@
                             Man kan ta med egen picnic eller stanna till vid de olika kiosker och restauranger som finns vid de olika stränderna. 
                             Att se solen gå ned vid Karlsöarna är ett måste!
                         </p>
-                        <img src="/img/turism/sunset465.jpg"
-                            srcset="/img/turism/sunset465.jpg 465w, /img/turism/sunset.jpg 800w"
-                            alt="Solnedgång över hamnplats">
+                        <img 
+                            src="/img/turism/sunset.jpg"
+                            alt="Solnedgång över hamnplats"
+                            srcset="/img/turism/sunset283.jpg 283w, /img/turism/sunset.jpg 407w"
+                           sizes="(min-width: 600px) 407px, 80vw"
+                        />
                     </article>
                     <article>
                         <h3 tabindex="0">Skeppssättning</h3>
@@ -229,7 +235,7 @@
                         <picture>
                             <source media="(max-width:800px)" srcset="/img/turism/grave_portrait.jpg">
                             <source media="(min-width:800px)" srcset="/img/turism/grave.jpg">
-                            <img src="/img/turism/grave.jpg" alt="Skeppssättning på Gotland" height="auto" width="auto">
+                            <img src="/img/turism/grave.jpg" alt="Skeppssättning på Gotland">
                         </picture>
                     </article>
                     <article>
@@ -241,9 +247,12 @@
                             Kvarnåkershamn som båda har stränder för hela familjen och kiosk och restaurang i närheten. 
                         </p>
                         <figure>
-                            <img src="/img/turism/beachDjupvik465.jpg"
-                            srcset="/img/turism/beachDjupvik465.jpg 465w, /img/turism/beachDjupvik.jpg 800w"
-                            alt="Djupviks Strand">
+                            <img 
+                                src="/img/turism/beachDjupvik.jpg"
+                                alt="Djupviks Strand"
+                                srcset="/img/turism/beachDjupvik283.jpg 283w, /img/turism/beachDjupvik.jpg 407w"
+                                sizes="(min-width: 600px) 407px, 80vw"
+                            />
                             <figcaption class="italic">Djupviks Strand, foto Bernt Enderborg</figcaption>
                         </figure>
                     </article>
@@ -254,9 +263,12 @@
                             Strax norr om Djupvik hittar man Fröjel Resort som har inomhuspool, gym och spa, samt rum och restaurang. <br />
                             Läs mer på deras hemsida: <a href="https://fröjel-resort.se" target="_blank" >fröjel-resort.se</a>
                         </p>
-                        <img src="/img/turism/fishinghuts465.jpg"
-                            srcset="/img/turism/fishinghuts465.jpg 465w, /img/turism/fishinghuts.jpg 800w"
-                            alt="Fiskehyddor längs strand">
+                        <img 
+                            src="/img/turism/fishinghuts.jpg"
+                            alt="Fiskehyddor längs strand"
+                            srcset="/img/turism/fishinghuts283.jpg 283w, /img/turism/fishinghuts.jpg 407w"
+                            sizes="(min-width: 600px) 407px, 80vw"
+                        />
                     </article>
                     <article>
                         <h3 tabindex="0">Öarna</h3>
@@ -264,128 +276,128 @@
                             Båten utgår från Klintehamn och resan till Lilla Karlsö tar 20 minuter och till Stora Karlsö 30-40 minuter.<br /><br />
                         </p>
                         <figure>
-                            <img src="/img/turism/birdIsland65.jpg"
-                                srcset="/img/turism/birdIsland465.jpg 465w, /img/turism/birdIsland.jpg 800w"
-                                alt="Havet med Stora Karlsö i bakgrunden">
+                            <img 
+                                src="/img/turism/birdIsland.jpg"
+                                alt="Havet med Stora Karlsö i bakgrunden"
+                                srcset="/img/turism/birdIsland283.jpg 283w, /img/turism/birdIsland.jpg 407w"
+                                sizes="(min-width: 600px) 407px, 80vw"
+                            /> 
                             <figcaption class="italic">För tider och priser och mer information om öarna gå till deras hemsidor: 
-                                <a href="http://lillakarlso.org/" target="_blank">lillakarlso.org</a> och <a href="http://www.storakarlso.se" target="_blank">storakarlso.se.</a></figcaption>
+                                <a href="http://lillakarlso.org/" target="_blank">lillakarlso.org</a> och <a href="http://www.storakarlso.se" target="_blank">storakarlso.se.</a>
+                            </figcaption>
                         </figure>
                     </article>
-                               
-                            
-                        
-                    </section>
-            </article>
-        </section>
-        <section class="padding">
-            <article id="memberInfo" class="padding">
+                </div>
+            </section>
+        </div>
+        <div class="padding">
+            <section id="memberInfo" class="padding">
                 <h2 tabindex="0">Medlemsinfo</h2>
-                    <section>
-                        <h3>SENASTE NYTT:</h3>
-                        <article class="flex-row"> 
-                            <section class="space margin">
-                                <h4 tabindex="0"> Hamnjobb</h4>
-                                <h5>2019-04-06</h5>
-                                <p>Lördagen den 6 april samlades ett antal av föreningens medlemmar för arbete i hamnen. 
-                                    Kiosken, kajerna och stranden städades. 
-                                    Kajer lagades och gräs brändes. 
-                                    Diverse fix på många håll. 
-                                    Vädret var bra och korven god. 
-                                    Det som återstår inför säsongen är att ta bort släke från stranden, att sätta upp ramp vid kiosken och att fylla kiosken med varor.
-                                </p>
-                                <figure>
-                                    <img src="/img/membersInfo/fishingnetl.jpg" alt="Man rensar fiskenät" height="150">
-                                    <img src="/img/membersInfo/beach.jpg" alt="Strand med brygga och småhus" height="150" witdh="225">
-                                </figure>
-                            </section>
-                            <section class="space">
-                                <h4 tabindex="0">Succé för hamnens dag!</h4>
-                                <h5>2018-07-16</h5>
-                                <p>Lördagen den 16 juli arrangerade föreningen Djupviks hamn i Eksta ”Hamnens dag” i Djupvik. 
-                                    Vårt arbete har med åren alltmer också inriktats på att alla besökare, även de som kommer landvägen skall trivas i det vackra hamnområdet. 
-                                    Nu bjöds det in till ”Hamnens dag”. 
-                                    På plats fanns sjöfartsverkets SAR-helikopter, Sjöräddningens båt Hwitstjärna, släckningsbil från räddningstjänsten i Klintehamn, 
-                                    russ från Gannarve och ett antal loppisförsäljare. 
-                                    Aktiviteten lockade ett stort antal besökare.
-                                    
-                                    Uppskattningsvis 1000 besökare sökte sig under dagen till Djupvik. 
-                                    Intresset var stort för de besökande organisationerna som informerade och alla fick möjlighet att titta och ställa frågor. 
-                                    Barnen fick rida, de bjöds på bulle och dricka och många prövade lyckan i fiskdammen. 
-                                    Det fanns möjlighet att handla kaffe, korv, dricka och glass. 
-                                    Många dröjde sig kvar i hamnområdet och trivdes i det inledningsvis lite blåsiga men vackra vädret.
-                                </p> 
-                                <figure>
-                                    <img src="/img/membersInfo/dock.jpg" alt="Människor vid pir" height="150" witdh="225">
-                                    <img src="/img/membersInfo/portDay.jpg" alt="Människor vid fiskyhyddor" height="150" width="110">
-                                    <figcaption class="italic right">Foto: Björn Hjernquist</figcaption> 
-                                </figure>
-                            </section>
+                <section>
+                    <h3>SENASTE NYTT:</h3>
+                    <div class="flex-row"> 
+                        <article class="space margin">
+                            <h4 tabindex="0"> Hamnjobb</h4>
+                            <h5>2019-04-06</h5>
+                            <p>Lördagen den 6 april samlades ett antal av föreningens medlemmar för arbete i hamnen. <br />
+                                Kiosken, kajerna och stranden städades. 
+                                Kajer lagades och gräs brändes. 
+                                Diverse fix på många håll. 
+                                Vädret var bra och korven god. <br />
+                                Det som återstår inför säsongen är att ta bort släke från stranden, att sätta upp ramp vid kiosken och att fylla kiosken med varor.
+                            </p>
+                            <figure>
+                                <img src="/img/membersInfo/fishingnetl.jpg" alt="Man rensar fiskenät" height="150">
+                                <img src="/img/membersInfo/beach.jpg" alt="Strand med brygga och småhus" height="150" width="225">
+                            </figure>
                         </article>
-                    </section>
-                    <aside>
-                        <h3 tabindex="0">Medlemmar</h3>
-                        <table id="memberTable" class="border">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Förnamn</th>
-                                    <th scope="col">Efternamn</th>
-                                    <th scope="col">Mail</th>
-                                    <th scope="col">Telefonnr</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td scope="row" data-label="Förnamn">Erik</td>
-                                    <td data-label="Efternamn">Ekholm</td>
-                                    <td data-label="Mail">erik@djupvik.se</td>
-                                    <td data-label="Telefonnr">070-123 45 67</td>  
-                                </tr>
-                                <tr>
-                                    <td scope="row" data-label="Förnamn">Bo</td>
-                                    <td data-label="Efternamn">Lautin</td>
-                                    <td data-label="Mail">bo@djupvik.se</td>
-                                    <td data-label="Telefonnr">071-234 56 78</td>  
-                                </tr>
-                                <tr>
-                                    <td scope="row" data-label="Förnamn">Fredrik</td>
-                                    <td data-label="Efternamn">Bottarve</td>
-                                    <td data-label="Mail">fredrik@djupvik.se</td>
-                                    <td data-label="Telefonnr">072-345 67 89</td>  
-                                </tr>
-                                <tr>
-                                    <td scope="row" data-label="Förnamn">Christina</td>
-                                    <td data-label="Efternamn">Persson</td>
-                                    <td data-label="Mail">christina@djupvik.se</td>
-                                    <td data-label="Telefonnr">073-456 78 90</td>  
-                                </tr>
-                                <tr>
-                                    <td scope="row" data-label="Förnamn">Per-Erik</td>
-                                    <td data-label="Efternamn">Larsson</td>
-                                    <td data-label="Mail">pere@djupvik.se</td>
-                                    <td data-label="Telefonnr">074-567 89 01</td>  
-                                </tr>
-                                <tr>
-                                    <td scope="row" data-label="Förnamn">Maria</td>
-                                    <td data-label="Efternamn">Fagerström</td>
-                                    <td data-label="Mail">maria@djupvik.se</td>
-                                    <td data-label="Telefonnr">075-678 90 12</td>  
-                                </tr>
-                                <tr>
-                                    <td scope="row" data-label="Förnamn">Lars</td>
-                                    <td data-label="Efternamn">Bengtsson</td>
-                                    <td data-label="Mail">lars@djupvik.se</td>
-                                    <td data-label="Telefonnr">076-789 01 23</td>  
-                                </tr>
-                            </tbody>
-                        </table>
-                    </aside>
+                        <article class="space">
+                            <h4 tabindex="0">Succé för hamnens dag!</h4>
+                            <h5>2018-07-16</h5>
+                            <p> Lördagen den 16 juli arrangerade föreningen Djupviks hamn i Eksta ”Hamnens dag” i Djupvik. <br />
+                                Vårt arbete har med åren alltmer också inriktats på att alla besökare, även de som kommer landvägen skall trivas i det vackra hamnområdet. 
+                                Nu bjöds det in till ”Hamnens dag”. <br />
+                                På plats fanns sjöfartsverkets SAR-helikopter, Sjöräddningens båt Hwitstjärna, släckningsbil från räddningstjänsten i Klintehamn, 
+                                russ från Gannarve och ett antal loppisförsäljare. 
+                                Aktiviteten lockade ett stort antal besökare.<br /><br />
+                                
+                                Uppskattningsvis 1000 besökare sökte sig under dagen till Djupvik. 
+                                Intresset var stort för de besökande organisationerna som informerade och alla fick möjlighet att titta och ställa frågor. 
+                                Barnen fick rida, de bjöds på bulle och dricka och många prövade lyckan i fiskdammen. 
+                                Det fanns möjlighet att handla kaffe, korv, dricka och glass. 
+                                Många dröjde sig kvar i hamnområdet och trivdes i det inledningsvis lite blåsiga men vackra vädret.
+                            </p> 
+                            <figure>
+                                <img src="/img/membersInfo/dock.jpg" alt="Människor vid pir" height="150" width="225">
+                                <img src="/img/membersInfo/portDay.jpg" alt="Människor vid fiskyhyddor" height="150" width="110">
+                                <figcaption class="italic right">Foto: Björn Hjernquist</figcaption> 
+                            </figure>
+                        </article>
+                    </div>
                 </section>
-            </article>
-        </section>
-        <section id="contact" class="padding">
-            <article class="padding">
+                <aside>
+                    <h3 tabindex="0">Medlemmar</h3>
+                    <table id="memberTable" class="border">
+                        <thead>
+                            <tr>
+                                <th scope="col">Förnamn</th>
+                                <th scope="col">Efternamn</th>
+                                <th scope="col">Mail</th>
+                                <th scope="col">Telefonnr</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Förnamn">Erik</td>
+                                <td data-label="Efternamn">Ekholm</td>
+                                <td data-label="Mail">erik@djupvik.se</td>
+                                <td data-label="Telefonnr">070-123 45 67</td>  
+                            </tr>
+                            <tr>
+                                <td data-label="Förnamn">Bo</td>
+                                <td data-label="Efternamn">Lautin</td>
+                                <td data-label="Mail">bo@djupvik.se</td>
+                                <td data-label="Telefonnr">071-234 56 78</td>  
+                            </tr>
+                            <tr>
+                                <td data-label="Förnamn">Fredrik</td>
+                                <td data-label="Efternamn">Bottarve</td>
+                                <td data-label="Mail">fredrik@djupvik.se</td>
+                                <td data-label="Telefonnr">072-345 67 89</td>  
+                            </tr>
+                            <tr>
+                                <td data-label="Förnamn">Christina</td>
+                                <td data-label="Efternamn">Persson</td>
+                                <td data-label="Mail">christina@djupvik.se</td>
+                                <td data-label="Telefonnr">073-456 78 90</td>  
+                            </tr>
+                            <tr>
+                                <td data-label="Förnamn">Per-Erik</td>
+                                <td data-label="Efternamn">Larsson</td>
+                                <td data-label="Mail">pere@djupvik.se</td>
+                                <td data-label="Telefonnr">074-567 89 01</td>  
+                            </tr>
+                            <tr>
+                                <td data-label="Förnamn">Maria</td>
+                                <td data-label="Efternamn">Fagerström</td>
+                                <td data-label="Mail">maria@djupvik.se</td>
+                                <td data-label="Telefonnr">075-678 90 12</td>  
+                            </tr>
+                            <tr>
+                                <td data-label="Förnamn">Lars</td>
+                                <td data-label="Efternamn">Bengtsson</td>
+                                <td data-label="Mail">lars@djupvik.se</td>
+                                <td data-label="Telefonnr">076-789 01 23</td>  
+                            </tr>
+                        </tbody>
+                    </table>
+                </aside>
+            </section>
+        </div>
+        <div id="contact" class="padding">
+            <section class="padding">
                 <h2 tabindex="0">Kontakt</h2>
-                <section class="flex-row">      
+                <div class="flex-row">      
                     <fieldset id="fieldset" class="space margin">
                         <legend>Kontaktuppgifter</legend>   
                         <p><span class="bold">Hamnfogde<br /> Bo Lautin</span><br /><br />
@@ -414,9 +426,15 @@
                             <textarea id="msg" name="msg" rows="5" maxlength="1000" required>Beskriv ditt ärende</textarea><br><br>
                             
                             <p class="bold">Hur vill du bli kontaktad?</p>
-                            <input id="radioMail" class="radio" type="radio" name="radio" value="mail"> Email<br />
-                            <input id="radioPhone" class="radio" type="radio" name="radio" value="phone" > Telefon<br />
-                            <input id="radioNone" class="radio" type="radio" name="radio" value="noContact"> Kontakta mig inte<br /><br />
+                            <label>
+                                <input id="radioMail" class="radio" type="radio" name="radio" value="mail">Email
+                            </label><br />
+                            <label>
+                                <input id="radioPhone" class="radio" type="radio" name="radio" value="phone" > Telefon
+                            </label><br />
+                            <label>
+                                <input id="radioNone" class="radio" type="radio" name="radio" value="noContact"> Kontakta mig interested
+                            </label><br /><br />
 
                             <label class="bold" for="email">Email:</label>
                             <input type="email" id="email" name="email"><br>
@@ -426,10 +444,14 @@
                             <input id="submit" type="submit" value="Skicka">
                         </fieldset>  
                     </form>
-                </section>
-            </article>
-        </section>
+                </div>
+            </section>
+        </div>
     </main>
-    <footer><p>&copy; Djupvikshamn.se info@djupvikshamn.se</p></footer>
+    <footer>
+        <a href="www.djupvikshamn.se" target="_blank">&copy; Djupvikshamn.se</a> 
+        <a href="mailto:info@djupvikshamn.se">info@djupvikshamn.se</a>
+    </footer>
+<script src="./assets/js/main.js"></script>
 </body>
 </html>
