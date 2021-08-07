@@ -93,7 +93,7 @@ main > div {
 }
 
 main > div > section,
-main > div > article {
+#english > article {
     max-width: 1200px;
     background-color: var(--opacity);
 }
